@@ -1,0 +1,113 @@
+Script :- 
+ {
+    https://www.themealdb.com/meal/52805-Lamb-Biryani
+
+    https://www.themealdb.com/api.php
+
+    Above api is for Script section 
+
+    Structure whatsapp kra h 
+
+    1st page Structure kra h 
+    click krne pe 2nd page open hoga
+
+    what this api provide :- image, title, ingredients, instructions/steps
+
+    refrence :- https://www.youtube.com/watch?v=s2j4IM4lGDQ&t=2378s
+ }
+
+
+
+{
+    https://developer.edamam.com//admin/applications/1409624124729
+
+    Application ID
+    process.env.REACT_APP_API_ID :- b4fa0e55
+
+    Application Keys
+    process.env.REACT_APP_API_KEY :- bc4dc2ea08fc8ac48a42b3e3b1974a45
+
+    Request URL
+    `https://api.edamam.com/api/recipes/v2?type=public&q=&app_id=${process.env.REACT_APP_API_ID}_key=${process.env.REACT_APP_API_KEY}`
+
+    what this api provide :- image, title, ingredients, instructions/steps, Nutritions
+
+    refrence :- https://www.youtube.com/watch?v=JJ_SnRlslgI&t=4174s
+}
+
+
+
+for videos :- 
+{
+    https://rapidapi.com/apidojo/api/yummly2
+
+    const axios = require('axios');
+
+    const options = {
+    method: 'GET',
+    url: 'https://yummly2.p.rapidapi.com/feeds/list',
+    params: {
+        limit: '200',
+        start: '0'
+    },
+    headers: {
+        'X-RapidAPI-Key': '801cfd6090msh43ba5a116c51f0ep1004f8jsna6de03eee58b',
+        'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
+    }
+    };
+
+    try {
+        const response = await axios.request(options);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
+    }
+
+
+    refrence :- https://www.youtube.com/watch?v=FlGTSb7_9jk&t=267s
+}
+
+
+              <span className="videoTitle">{video.title}</span> 
+              <div className="icons">
+                <div className="one">
+                  <span className="star">
+                    <FaStar />
+                  </span>
+                  <span className="rating">{video.rating}</span>
+                </div>
+                <div className="two">
+                  <span className="clock">
+                    <FaClock />
+                  </span>
+                  <span className="time">{video.time}</span>
+                </div>
+              </div>
+
+
+
+IMPORTTANT :- 
+
+mealdb api :- https://www.themealdb.com/api/json/v1/1/random.php
+
+yt api :- 
+
+        const youtubeApiKey = 'AIzaSyC7F2ZsrQszdBBVjUf-VGSxVxBky8jN5_8';
+        const query = `${recipeInfo.strMeal} recipe`;
+
+        const youtubeResponse = await fetch(
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`
+        );
+
+
+
+const videosArray = videoItems.map((item) => ({
+  title: item.snippet.title,
+  thumbnail: item.snippet.thumbnails.medium.url,
+  videoId: item.id.videoId,
+  likeCount: item.statistics ? item.statistics.likeCount : 0, // Retrieve like count if available
+  duration: item.contentDetails ? item.contentDetails.duration : 'N/A', // Retrieve video duration if available
+}));
+
+
+     
